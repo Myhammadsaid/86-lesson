@@ -1,0 +1,39 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 10px 0px 10px 0px #000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.nav__title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav__link {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.active {
+  color: rgba(0, 0, 255, 0.466);
+}

@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "img": "https://images.pexels.com/photos/12836309/pexels-photo-12836309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Hello Server",
+      "par": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, odio!"
+    },
+    {
+      "id": "2",
+      "img": "https://images.pexels.com/photos/12836309/pexels-photo-12836309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Hello World!",
+      "par": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, odio!"
+    }
+  ]
+}
