@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./BlogFetch.css";
+import Swal from "sweetalert2";
 const API = "http://localhost:4000/blogs";
 
 const BlogsFetch = () => {
@@ -69,10 +70,36 @@ const BlogsFetch = () => {
 
   // D //
   const handleDelete = (id) => {
-    fetch(`${API}/${id}`, {
-      method: "DELETE",
-    }).then(() => {
-      setReload((p) => !p);
+    Swal.fire({
+      title: "Are you sure?",
+      text: `Do you want to remove this item from the cart?`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, remove it!",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`${API}/${id}`, {
+          method: "DELETE",
+        })
+          .then(() => {
+            setReload((p) => !p);
+            Swal.fire(
+              "Deleted!",
+              "The item has been removed from the cart.",
+              "success"
+            );
+          })
+          .catch((error) => {
+            Swal.fire(
+              "Error!",
+              "An error occurred while deleting the item.",
+              "error"
+            );
+          });
+      }
     });
   };
 
